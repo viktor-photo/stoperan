@@ -1,0 +1,282 @@
+<!doctype html>
+<!--[if IE 8]><html lang="pl" class="no-js lt-ie10 lt-ie9 ie8 ie" ng-app='App'> <![endif]-->
+<!--[if IE 9]><html lang="pl" class="no-js lt-ie10 ie9 ie" ng-app='App'> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="pl" class="no-js" ng-app='App'> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>Stoperan poleca</title>
+		<meta name="description" content="Project description">
+		<script src="js/vendor/modernizr.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- Favicons and Touch Device Icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-icon" sizes="72x72"   href="apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header" role="banner">
+			<div class="row">
+				<div class="small-12 column">
+					<div class="left">
+						<ul class="social-links">
+							<li>
+								<a href="#" class="ir" title="Facebook" rel="nofollow" target="_blank">
+									<img src="img/svg/facebook.svg" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="#" class="ir" title="Instagram" rel="nofollow" target="_blank">
+									<img src="img/svg/instagram.svg" alt="Instagram">
+								</a>
+							</li>
+							<!-- <li>
+								<a href="#" class="ir" title="Twitter" rel="nofollow" target="_blank">
+									<img src="img/svg/twitter.svg" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="#" class="ir" title="Youtube" rel="nofollow" target="_blank">
+									<img src="img/svg/youtube.svg" alt="Youtube">
+								</a>
+							</li> -->
+						</ul>
+					</div>
+					<div class="right">
+						<ul class="not-logged-in text-right">
+							<li>
+								<a href="#" data-modal="login-popup" class="login">Logowanie</a>
+							</li>
+							<li>
+								<a href="#" data-modal="register-popup" class="register">Rejestracja</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main banner -->
+		<div class="main-banner wybrana-plaza">
+			<div class="row collapse full-height">
+				<div class="small-12 columns full-height">
+					<span class="triangles white show-for-large-up"></span>
+					<a href="#" class="button red arrow right large">Strona główna</a>
+					<a href="#" class="logo v-align ir" title="Stoperan">Stoperan</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<main id="content">
+
+			<article>
+				<!-- Page Title section -->
+				<section class="page-title">
+					<div class="row">
+						<div class="small-12 column">
+							<h1>Plaża miejska <span class="location">(GDYNIA ŚRÓDMIEŚCIE)</span></h1>
+						</div>
+					</div>
+				</section>
+
+				<div class="row">
+					<!-- Sidebar -->
+					<aside class="small-12 medium-4 large-3 columns">
+
+						<a href="#" class="button red arrow uppercase no-padding expand go-back">Wróć do informacji o plaży</a>
+
+						<div class="current-place widget clearfix">
+							<div class="clearfix">
+								<span class="num mb10 color-red left">07</span>
+								<span class="desc mb10 color-blue left uppercase">miejsce <br />w rankingu</span>
+							</div>
+							<strong class="color-blue block">plaża beztroska na <span class="color-red">44%</span></strong>
+						</div>
+
+						<div class="prize widget">
+							<div class="w-head">
+								<h3 class="mb20">Nagroda Gwarantowana</h3>
+							</div>
+							<div class="w-content">
+								<a href="#" class="block text-center mb20" title="Nagroda Gwarantowana">
+									<img src="img/prize.jpg" alt="Nagroda Gwarantowana">
+								</a>
+							</div>
+						</div>
+					</aside>
+
+					<!-- Main content -->
+					<div class="small-12 medium-8 large-9 columns">
+
+						<!-- Add beach review form -->
+						<section class="add-beach-review mb20 clearfix">
+							<h2 class="color-red uppercase">DZIĘKUJEMY ZA ODDANIE GŁOSU. <br />ZOSTAW SWOJĄ RECENZJĘ <br />I ODBIERZ NAGRODĘ</h2>
+							<form action="" name="beach-review-form">
+								<textarea class="mb20" name="textarea" placeholder="Tutaj wpisz swoją recenzję..."></textarea>
+								<div class="block">
+									<div class="button blue-border white mb20 arrow uppercase">Dodaj zdjęcia plaży <input type="file" multiple ></div>
+									<span id="input-value" class="inline"></span>
+								</div>
+								<div class="block">
+									<button type="submit" class="button arrow red uppercase">ZAPISZ RECENZJE</button>
+								</div>
+							</form>
+						</section>
+
+					</div>
+				</div>
+
+			</article>
+
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" role="contentinfo">
+			<div class="row">
+				<div class="small-12 medium-10 large-6 column">
+					<div class="row">
+						<div class="small-12 column">
+							<div class="logo-wrap">
+								<a href="#" class="logo ir" title="Stoperan">Stoperan poleca</a>
+								<p>© 2008-2013 USP Zdrowie Sp. z o.o.<br />ul. Poleczki 35, 02-822 Warszawa<br /> Tel: (71) 714 94 00 fax: (71) 714 94 10</p>
+							</div>
+							<div class="menus">
+								<ul>
+									<li><a href="#">Strona główna</a></li>
+									<li><a href="#">Zobacz pełny ranking</a></li>
+									<li><a href="#">Oceń plaże</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Regulamin</a></li>
+									<li><a href="#">Polityka prywatności</a></li>
+								</ul>
+								<a href="#">www.stoperan.pl</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 column small-text-left medium-text-right">
+					<p class="tech">Technologia: <a href="#" class="color-white"><b>Connectmedica</b></a></p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Login modal box -->
+		<div id="login-popup" class="modal-box">
+			<header>
+				<h3 class="modal-title">Logowanie</h3>
+			</header>
+			<div class="modal-body">
+				<form action="" name="login">
+					<div class="field login-field">
+						<input type="text" placeholder="email lub login">
+						<span class="error-icon"></span>
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="field password-field">
+						<input type="password" placeholder="hasło">
+						<span class="error-icon"></span>
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 medium-6 columns">
+							<a href="#" class="link remind-pasword" title="Nie pamiętam hasła">+ nie pamiętam hasła</a>
+							<a href="#" class="link create-account" title="Załóż konto">+ załóż konto</a>
+						</div>
+						<div class="small-12 medium-6 columns">
+							<a href="#" class="button uppercase mb0 no-bg blue-border" title="Zaloguj">+Zaloguj</a>
+						</div>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 medium-8 medium-centered text-center columns">
+							<span class="text-center uppercase color-white or">lub</span>
+							<a href="#" class="facebook-login block" title="Zaloguj przez Facebook">Zaloguj przez Facebook</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Register modal box -->
+		<div id="register-popup" class="modal-box">
+			<header>
+				<h3 class="modal-title">Rejestracja</h3>
+			</header>
+			<div class="modal-body">
+				<form action="" name="register">
+					<div class="field login-field">
+						<input type="text" placeholder="Kasia">
+						<span class="add-icon"></span>
+						<!-- <span class="error-icon"></span> -->
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="field email-field">
+						<input type="email" placeholder="kasia@gmail.com">
+						<span class="add-icon"></span>
+						<!-- <span class="error-icon"></span> -->
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="field password-field">
+						<input type="password" placeholder="hasło">
+						<span class="error-icon"></span>
+						<span class="tip">hasło musi posiadać<br />minimum osiem znaków</span>
+					</div>
+					<div class="field password-field">
+						<input type="password" placeholder="powtórz hasło">
+						<span class="error-icon"></span>
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="row collapse">
+						<input type="checkbox" id="check-1">
+						<label for="check-1" class="checkbox">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w powyższym formularzu w celu komunikacji marketingowej oraz handlowej przez USP Zdrowie sp. z o.o. w Warszawie ul. Poleczki 35 i inne podmioty współpracujące z USP Zdrowie zgodnie z ustawą z dnia 29.08.1997 r. o Ochronie Danych Osobowych, Dz. U. z 2002 r., Nr 101, poz. 926 z późn. zm. Jednocześnie oświadczam, że zostałem/am poinformowany/a, że podanie danych jest dobrowolne oraz o moim prawie dostępu do danych osobowych i ich poprawiania.</label>
+					</div>
+					<div class="row collapse">
+						<input type="checkbox" id="check-2">
+						<label for="check-2" class="checkbox">Wyrażam zgodę na otrzymywanie od USP Zdrowie sp. z o.o. w Warszawie i innych podmiotów współpracujących z USP Zdrowie informacji handlowych drogą elektroniczną zgodnie z ustawą z dnia 18.07.2002 r. o świadczeniu usług drogą elektroniczną, Dz. U. z 2013 r., poz. 1422</label>
+					</div>
+					<div class="row collapse mb30">
+						<input type="checkbox" id="check-3">
+						<label for="check-3" class="checkbox table-cell">Akceptuję <a href="#" class="inline">regulamin</a> serwisu</label>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 small-centered medium-9 large-7 text-center column">
+							<a href="#" class="button uppercase mb0 no-bg blue-border" title="Zarejestruj">+Zarejestruj</a>
+						</div>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 small-centered medium-9 large-7 text-center column">
+							<span class="text-center uppercase color-white or">lub</span>
+						</div>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 small-centered medium-9 large-7 text-center column">
+							<a href="#" class="facebook-login block" title="Zarejestruj przez Facebook">Zarejestruj przez Facebook</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/foundation/foundation.js"></script>
+		<script src="js/foundation/foundation.equalizer.js"></script>
+		<script src="js/vendor/jquery.nouislider.all.min.js"></script>
+		<script src="js/vendor/slick.min.js"></script>
+		<script src="js/vendor/jquery.stylish-select.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

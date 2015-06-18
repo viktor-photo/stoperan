@@ -1,0 +1,297 @@
+.weather-large{
+	position: relative;
+	background: $blue;
+	color: $white;
+	display: block;
+	padding: 10px 5px;
+		
+	@include transition(all, 0.2s);
+
+	@include phone-up{
+		padding: 10px;
+	}
+	
+	@include tablet-up{
+		padding: 15px 10px 15px 15px;
+	}
+	
+	@include wide-up{
+		padding: 20px;
+	}
+
+	.icon{
+		display: block;
+		position: relative;
+		
+		@include transition(all, 0.2s);
+
+		&.sun{
+			background: url('../img/svg/sun.svg') no-repeat 0 0;
+			background-size: 100% auto;
+		}
+		&.humidity{
+			background: url('../img/svg/umbrella.svg') no-repeat 0 0;
+		}
+		&.wind{
+			background: url('../img/svg/wind.svg') no-repeat 0 0;
+		}
+	}
+	
+	.actual-temp{
+		font-size: 30px;
+		font-family: 700;
+		position: relative;
+		display: table;
+		margin: 0 auto;
+		text-align: center;
+		line-height: 1em;
+		
+		@include transition(all, 0.2s);
+
+		@include phone-up{
+			font-size: 40px;
+		}
+		@include tablet-up{
+			font-size: 56px;
+			top: 4px;
+		}
+		@include desktop-up{
+			font-size: 90px;
+			padding-top: 5px;
+			font-weight: 700;
+		}
+		@include wide-up{
+			font-size: 120px;
+		}
+
+		&:before{
+			content: '';
+			width: 8px;
+			height: 8px;
+			display: block;
+			border-radius: 50%;
+			border: 2px solid $white;
+			position: absolute;
+			top: 0;
+			right: -5px;
+
+			@include tablet-up{
+				top: 0px;
+				width: 9px;
+				height: 9px;
+			}
+			@include desktop-up{
+				width: 16px;
+				height: 16px;
+				right: -10px;
+				border-width: 3px;
+			}
+			@include wide-up{
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+
+	.cell-1{
+
+		@include phone-up{
+			width: 14%;
+		}	
+	}
+
+	.cell-2{
+
+		@include phone-up{
+			width: 20%;
+		}
+			
+		.icon{
+			width: 30px;
+			height: 30px;
+			display: block;
+			margin: 0 auto;
+		
+			@include transition(all, 0.2s);
+
+			@include phone-up{
+				width: 40px;
+				height: 40px;
+			}
+			@include tablet-up{
+				width: 50px;
+				height: 50px;
+			}
+			@include desktop-up{
+				width: 90px;
+				height: 90px;
+			}
+			@include wide-up{
+				width: 120px;
+				height: 120px;
+			}
+		}
+	}
+
+	.cell-3{
+
+		@include phone-up{
+			width: 24%;
+		}	
+		
+		span.icon{
+			display: block;
+			font-size: 10px;
+			line-height: 1em;
+			margin: 2px 0;
+			padding-left: 15px;
+			background-size: 10px auto;
+			background-position: left center;
+		
+			@include transition(all, 0.2s);
+
+			@include phone-up{
+				font-size: 14px;
+				line-height: 1.25em;
+				padding-left: 24px;
+				background-size: 15px auto;
+			}
+			@include tablet-up{
+				font-size: 17px;
+				line-height: 1.25em;
+				padding-left: 30px;
+				background-size: 20px auto;
+			}
+			@include desktop-up{
+				font-size: 30px;
+				line-height: 1.65em;
+				padding-left: 45px;
+				background-size: 32px auto;
+			}
+			@include wide-up{
+				font-size: 38px;
+				line-height: 1.65em;
+				padding-left: 50px;
+				background-size: 40px auto;
+			}
+		}
+	}
+
+	.cell-4,
+	.cell-5{
+		font-size: 8px;
+		line-height: 1em;
+		padding: 2px;
+		border-left: 1px solid $white;
+		
+		@include transition(all, 0.2s);
+
+		@include phone-up{
+			font-size: 12px;
+			width: 20%
+		}
+		@include tablet-up{
+			font-size: 18px;
+		}
+		@include desktop-up{
+			font-size: 24px;
+			border-left: 2px solid $white;
+
+			& > span{
+				display: block;
+				margin-bottom: 15px;
+				font-weight: 700;
+			}
+		}
+		@include wide-up{
+			font-size: 30px;
+
+			& > span{
+				margin-bottom: 20px;
+			}
+		}
+
+		.temp{
+			font-size: 14px;
+			line-height: 16px;
+			position: relative;
+			display: table;
+			margin: 0 auto;
+
+			@include phone-up{
+				font-size: 22px;
+				margin-top: 3px;
+			}
+			@include tablet-up{
+				font-size: 30px;
+				margin-top: 6px;
+			}
+			@include desktop-up{
+				font-size: 50px;
+				line-height: 1em;
+				font-weight: 700;
+			}
+			@include wide-up{
+				font-size: 60px;
+				line-height: 1em;
+				font-weight: 700;
+			}
+
+			&:before{
+				content: '';
+				width: 5px;
+				height: 5px;
+				display: block;
+				border-radius: 50%;
+				border: 1px solid $white;
+				position: absolute;
+				top: -3px;
+				right: -5px;
+
+				@include tablet-up{
+					top: -7px;
+					width: 6px;
+					height: 6px;
+				}
+				@include desktop-up{
+					top: -4px;
+					right: -8px;
+					width: 8px;
+					height: 8px;
+					border: 2px solid $white;
+				}
+				@include wide-up{
+					width: 11px;
+					height: 11px;
+				}
+			}
+		}
+
+		.icon{
+			width: 16px;
+			height: 16px;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+
+			@include phone-up{
+				width: 20px;
+				height: 20px;
+			}
+			@include tablet-up{
+				width: 25px;
+				height: 25px;
+			}
+			@include desktop-up{
+				width: 45px;
+				height: 45px;
+				top: 2px;
+			}
+			@include wide-up{
+				width: 60px;
+				height: 60px;
+				top: 2px;
+			}
+		}
+	}
+}

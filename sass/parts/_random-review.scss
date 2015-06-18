@@ -1,0 +1,158 @@
+.random-review{
+	position: absolute;
+	padding-left: 40px;
+	display: block;
+	color: $white;
+	width: 200px;
+	right: 1.5rem;
+	top: 70px;
+		
+	@include transition(all, 0.2s);
+
+	@include phone-up{
+		width: 260px;
+	}
+	@include medium-up{
+		width: 330px;
+		top: 100px;
+		padding-left: 55px;
+	}
+	@include tablet-up{
+		top: 180px;
+		width: 380px;
+		padding-left: 65px;
+	}
+	@include desktop-up{
+		top: 200px;
+	}
+
+	&:before{
+		content:'';
+		width: 30px;
+		height: 30px;
+		display: block;
+		background: $blue;
+		color: $white;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include medium-up{
+			width: 40px;
+			height: 40px;
+		}
+		
+		@include tablet-up{
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&:after{
+		content: '';
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		background: url('../img/svg/quotes.svg') no-repeat center center;
+		background-size: 100% auto;
+
+		@include medium-up{
+			width: 30px;
+			height: 30px;
+			top: 5px;
+			left: 5px;
+		}
+		
+		@include tablet-up{
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	h4{
+		color: $white;
+		display: block;
+		line-height: 1em;
+		font-size: 18px;
+		font-weight: 900;
+		padding-top: 0.5em;
+		margin: 0 0 0.25em;
+
+		@include phone-up{
+			padding-top: 0.25em;
+			font-size: 22px;
+		}
+
+		@include medium-up{
+			font-size: 30px;
+		}
+		
+		@include tablet-up{
+			font-size: 35px;
+		}
+	}
+
+	.location{
+		display: block;
+		line-height: 1.25em;
+		margin: 0 0 0.25em;
+		font-size: 12px;
+
+		@include phone-up{
+			font-size: 16px;
+		}
+		
+		@include tablet-up{
+			font-size: 18px;
+		}
+
+		span{
+			display: block;
+
+			@include medium-up{
+				display: inline;
+			}
+		}
+	}
+
+	strong{
+		display: block;
+		line-height: 1em;
+		font-size: 12px;
+		position: relative;
+		padding-left: 12px;
+
+		&:before{
+			content: '';
+			width: 8px;
+			height: 8px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 2px;
+			border-left: 8px solid $white;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+
+			@include medium-up{
+				top: 5px;
+			}
+		}
+
+		@include phone-up{
+			font-size: 14px;
+		}
+
+		@include medium-up{
+			font-size: 17px;
+		}
+		
+		@include tablet-up{
+			font-size: 20px;
+			font-weight: 900;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.current-place{
+	display: block;
+	border: 2px solid $blue;
+	padding: 15px;
+
+	@include transition(all, 0.2s);
+
+	.num{
+		font-weight: 300;
+		font-size: 45px;
+		line-height: 0.8em;
+		margin-right: 0.5rem;
+		
+		@include transition(all, 0.2s);
+
+		@include wide-up{
+			font-size: 60px;
+			margin-right: 0.75rem;
+		}
+
+		@include ultra-wide{
+			font-size: 78px;
+			margin-right: 1rem;
+		}
+	}
+
+	.desc{
+		font-size: 17px;
+		line-height: 1.2em;
+		font-weight: 900;
+		
+		@include transition(all, 0.2s);
+
+		@include wide-up{
+			font-size: 22px;
+		}
+
+		@include ultra-wide{
+			font-size: 28px;
+		}
+	}
+
+	strong{
+		font-weight: 900;
+		position: relative;
+		padding-left: 15px;
+		display: block;
+		line-height: 1em;
+		
+		@include transition(all, 0.2s);
+
+		@include wide-up{
+			font-size: 18px;
+			margin-top: 6px;
+		}
+
+		@include ultra-wide{
+			font-size: 24px;
+			font-weight: 700;
+			padding-left: 20px;
+		}
+
+		&:before{
+			content: '';
+			width: 10px;
+			height: 10px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 8px;
+			margin-top: -6px;
+			border-left: 8px solid $blue;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+
+			@include ultra-wide{
+				width: 12px;
+				height: 12px;
+				margin-top: -3px;
+				border-left-width: 12px;
+				border-top: 6px solid transparent;
+				border-bottom: 6px solid transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.add-beach-review {
+	position: relative;
+
+	h2{
+		text-transform: uppercase;
+		color: $red;
+		font-weight: 900;
+		font-size: 17px;
+
+		@include transition(all, 0.25s);
+		
+		@include phone-up{
+			font-size: 18px;
+		}
+		@include medium-up{
+			font-size: 22px;
+		}
+		@include tablet-up{
+			font-size: 26px;
+		}
+		@include desktop-up{
+			font-size: 30px;
+		}
+		@include wide-up{
+			font-size: 34px;
+		}
+		@include ultra-wide{
+			font-size: 38px;
+		}
+	}
+
+	textarea{
+		font-weight: 300;
+		padding: 1rem;
+
+		@include phone-up{
+			font-size: 16px;
+		}
+		@include medium-up{
+			font-size: 17px;
+		}
+		@include tablet-up{
+			font-size: 18px;
+		}
+		@include desktop-up{
+			font-size: 19px;
+		}
+		@include wide-up{
+			font-size: 20x;
+		}
+		@include ultra-wide{
+			font-size: 22px;
+		}
+	}
+
+	.button{
+		position: relative;
+		width: 260px;
+
+		&.red{
+			border: 2px solid $red;
+		}
+
+		input{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			cursor: pointer;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			z-index: 10;
+			margin: 0;
+		}
+
+		&:before{
+			border-left-width: 12px !important;
+			border-top-width: 6px !important;
+			border-bottom-width: 6px !important;
+			width: 12px !important;
+			height: 12px !important;
+			margin-top: -6px !important;
+			left: 14px !important;
+		}
+	}
+}

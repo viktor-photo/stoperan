@@ -1,0 +1,30 @@
+.page-title{
+	position: relative;
+	padding: 20px 0 15px;
+
+	@include transition(all, 0.2s);
+
+	@include medium-up{
+		padding: 35px 0 25px;
+		background: url('../img/triangles-bg.png') no-repeat right top;
+		background-size: auto 85%;
+	}
+	@include tablet-up{
+		padding: 40px 0 30px;
+	}
+	@include desktop-up{
+		padding: 50px 0 35px;
+	}
+	@include wide-up{
+		padding: 60px 0 40px;
+	}
+	// @include ultra-wide{
+	// 	padding: 70px 0 45px;
+	// }
+
+	h1{
+		.location{
+			display: block;
+		}
+	}
+}

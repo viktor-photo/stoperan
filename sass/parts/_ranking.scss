@@ -1,0 +1,345 @@
+.ranking{
+	position: relative;
+	padding: 35px 0;
+
+	@include transition(all, 0.2s);
+
+	@include phone-up{
+		padding: 40px 0;
+	}
+	@include medium-up{
+		padding: 50px 0;
+	}
+	@include tablet-up{
+		padding: 60px 0;
+	}
+	@include desktop-up{
+		padding: 70px 0;
+	}
+	@include wide-up{
+		padding: 80px 0;
+	}
+
+	.rank-item{
+		position: relative;
+		margin-bottom: 30px;
+		background: $white;
+		color: $blue;
+		min-height: 220px;
+		border: 3px solid $blue;
+
+		@include medium-up{
+			margin-bottom: 35px;
+		}
+
+		@include tablet-up{
+			margin-bottom: 40px;
+		}
+
+		&.featured,
+		&:hover{
+			background: $blue;
+			color: $white;
+
+			.item-thumbnail .place{
+				color: $blue;
+			}
+
+			.total-score{
+				border-color: $white;
+
+				.txt{
+					background: $white;
+					color: $blue;
+				}
+			}
+
+			.title{
+				color: $white;
+
+				a{
+					color: $white;
+				}
+			}
+
+
+			.item-content{
+
+				@include medium-up{
+					background: url('../img/triangles-bg.png') no-repeat right top;
+				}
+
+				.button{
+					border-color: $white;
+				}
+				.place{
+					border-left-color: $white;
+
+					@include transition(all, 0.2s);
+
+					span{
+						color: $blue;
+					}
+				}
+			}
+		}
+
+		// &:hover{
+		// 	.button:hover{
+		// 		background: $red;
+		// 		color: $white;
+		// 		border-color: $red;
+
+		// 		&:before{
+		// 			border-left-color: $white;
+		// 		}
+		// 	}
+		// }
+
+		.item-thumbnail{
+			position: relative;
+			min-height: 214px;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center top;
+
+			.place{
+				position: absolute;
+				top: 50%;
+				left: 0;
+				z-index: 1;
+				font-size: 90px;
+				font-weight: 300;
+				line-height: 90px;
+				letter-spacing: -0.025em;
+				margin-top: -45px;
+				color: $blue;
+
+				@include transition(all, 0s);
+
+				&:before{
+					content: '';
+					width: 170px;
+					height: 230px;
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: -3px;
+					margin-top: -115px;
+					border-left: 170px solid $white;
+					border-top: 115px solid transparent;
+					border-bottom: 115px solid transparent;
+					z-index: -1;
+				}
+			}
+		}
+
+		.item-content{
+			position: relative;
+			min-height: 214px;
+			height: 100%;
+			padding: 20px 20px 0px 85px;
+
+			@include phone-up{
+				background: url('../img/triangles-bg.png') no-repeat right top;
+			}
+
+			@include medium-up{
+				padding: 20px 40px 10px 60px;
+			}
+
+			.title{
+				font-size: 20px;
+				line-height: 1.1em;
+				margin: 15px 0 0.1em;
+				font-weight: 900;
+
+				@include medium-up{
+					font-size: 24px;
+				}
+
+				@include tablet-up{
+					font-size: 28px;
+				}
+
+				@include desktop-up{
+					font-size: 36px;
+				}
+			}
+
+			.location{
+				font-size: 18px;
+				line-height: 1.2em;
+				font-weight: 300;
+
+				@include tablet-up{
+					font-size: 20px;
+				}
+
+				@include desktop-up{
+					font-size: 22px;
+				}
+
+				@include wide-up{
+					font-size: 24px;
+				}
+			}
+
+			.button{
+				margin: 0.5em 0 0;
+				padding: 0 10px 0 30px;
+
+				@include medium-up{
+					font-size: 20px;
+					font-weight: 900;
+					height: 42px;
+					line-height: 40px;
+					padding: 0 20px 0 35px;
+				}
+
+				@include desktop-up{
+					padding: 0 20px 0 35px;
+					height: 48px;
+					line-height: 48px;
+					margin: 0.75em 0 0;
+				}
+
+				@include wide-up{
+					font-size: 22px;
+				}
+			}
+
+			.place{
+				width: 68px;
+				height: 94px;
+				display: block;
+				position: absolute;
+				left: -3px;
+				top: -3px;
+				border-left: 68px solid $blue;
+				border-top: 47px solid transparent;
+				border-bottom: 47px solid transparent;
+
+				@include medium-up{
+					width: 40px;
+					height: 56px;
+					top: 20px;
+					left: 0;
+					border-left-width: 40px;
+					border-top-width: 28px;
+					border-bottom-width: 28px;
+				}
+
+				@include desktop-up{
+					top: 32px;
+				}
+
+				span{
+					color: $white;
+					display: block;
+					position: absolute;
+					left: -65px;
+					top: -47px;
+					line-height: 94px;
+					font-weight: 300;
+					font-size: 34px;
+				}
+			}
+		}
+
+		.total-score{
+			position: relative;
+			border: 5px solid $blue;
+			width: 60px;
+			height: 50px;
+			display: block;
+
+			@include transition(all, 0s);
+
+			@include desktop-up{
+				width: 80px;
+				height: 70px;
+				margin-bottom: 10px;
+			}
+
+			span{
+				display: block;
+				width: 100%;
+				text-align: center;
+
+				&.scr{
+					font-weight: 900;
+					font-size: 20px;
+					line-height: 18px;
+					margin: 4px 0 0;
+
+					@include desktop-up{
+						font-size: 30px;
+						line-height: 30px;
+					}
+
+				}
+				&.txt{
+					font-size: 16px;
+					line-height: 16px;
+					padding: 5px 0 0;
+					font-weight: 900;
+					background-color: $blue;
+					color: $white;
+
+					@include desktop-up{
+						font-size: 20px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+
+		&:nth-child(2){
+			-webkit-animation-delay: 0.2s;
+			-moz-animation-delay: 0.2s;
+			-ms-animation-delay: 0.2s;
+		}
+		&:nth-child(3){
+			-webkit-animation-delay: 0.4s;
+			-moz-animation-delay: 0.4s;
+			-ms-animation-delay: 0.4s;
+		}
+		&:nth-child(4){
+			-webkit-animation-delay: 0.6s;
+			-moz-animation-delay: 0.6s;
+			-ms-animation-delay: 0.6s;
+		}
+		&:nth-child(5){
+			-webkit-animation-delay: 0.8s;
+			-moz-animation-delay: 0.8s;
+			-ms-animation-delay: 0.8s;
+		}
+		&:nth-child(6){
+			-webkit-animation-delay: 1s;
+			-moz-animation-delay: 1s;
+			-ms-animation-delay: 1s;
+		}
+		&:nth-child(7){
+			-webkit-animation-delay: 1.2s;
+			-moz-animation-delay: 1.2s;
+			-ms-animation-delay: 1.2s;
+		}
+		&:nth-child(8){
+			-webkit-animation-delay: 1.4s;
+			-moz-animation-delay: 1.4s;
+			-ms-animation-delay: 1.4s;
+		}
+		&:nth-child(9){
+			-webkit-animation-delay: 1.6s;
+			-moz-animation-delay: 1.6s;
+			-ms-animation-delay: 1.6s;
+		}
+		&:nth-child(10){
+			-webkit-animation-delay: 1.8s;
+			-moz-animation-delay: 1.8s;
+			-ms-animation-delay: 1.8s;
+		}
+	}
+}

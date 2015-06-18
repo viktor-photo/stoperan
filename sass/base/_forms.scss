@@ -1,0 +1,308 @@
+form{
+	position: relative;
+	font-family: $font-stack;
+	font-size: $initial-size;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"] {
+		height: 40px;
+		line-height: 40px;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 1rem;
+		background: $white;
+		border: 2px solid $blue;
+		box-shadow: none;
+		font-weight: 300;
+		font-family: $font-stack;
+		font-size: $initial-size;
+
+		@include phone-up{
+			font-size: 16px;
+		}
+		@include medium-up{
+			font-size: 17px;
+		}
+		@include tablet-up{
+			font-size: 18px;
+		}
+		@include desktop-up{
+			font-size: 19px;
+		}
+		@include wide-up{
+			font-size: 20x;
+		}
+		@include ultra-wide{
+			font-size: 22px;
+		}
+
+		@include medium-up{
+			margin-bottom: 0.75rem;
+			height: 50px;
+			line-height: 50px;
+		}
+
+		@include desktop-up{
+			margin-bottom: 1.25rem;
+			height: 60px;
+			line-height: 60px;
+		}
+	}
+
+	textarea{
+		height: auto;
+		line-height: 1.5em;
+		font-size: $initial-size;
+		background: $white;
+		border: 2px solid $blue;
+		box-shadow: none;
+		min-height: 250px;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="password"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	textarea:focus{
+		box-shadow: none;
+		background: $white;
+		border-color: $blue;
+	}
+
+	fieldset{
+		border: none;
+		background: transparent;
+		padding: 0;
+		font-size: $initial-size;
+	}
+
+	label{
+		font-size: $initial-size;
+		line-height: 34px;
+	}
+
+	.error-icon{
+		width: 35px;
+		height: 35px;
+		display: block;
+		background: url('../img/svg/error-icon.svg') no-repeat center center;
+		background-size: 22px 22px;
+
+		@include medium-up{
+			height: 45px;
+			width: 45px;
+		}
+
+		@include tablet-up{
+			height: 55px;
+			width: 55px;
+			background-size: 26px 26px;
+		}
+
+		@include desktop-up{
+			height: 65px;
+			width: 65px;
+			background-size: 30px 30px;
+		}
+	}
+
+	.add-icon{
+		width: 35px;
+		height: 35px;
+		display: block;
+		background: url('../img/svg/plus-icon.svg') no-repeat center center;
+		background-size: 22px 22px;
+
+		@include medium-up{
+			height: 45px;
+			width: 45px;
+		}
+
+		@include tablet-up{
+			height: 55px;
+			width: 55px;
+			background-size: 26px 26px;
+		}
+
+		@include desktop-up{
+			height: 65px;
+			width: 65px;
+			background-size: 30px 30px;
+		}
+	}
+}
+
+// Custom radio buttons
+input[type="radio"]{
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+input[type="radio"] + label{
+	position: relative;
+	display: table;
+	background: transparent;
+	color: $blue;
+	padding-left: 20px;
+	margin: 0 auto 20px;
+	line-height: 1.1875em;
+}
+input[type="radio"] + label:before{
+	content: '';
+	width: 14px;
+	height: 14px;
+	display: block;
+	border-radius: 50%;
+	border: 1px solid $blue;
+	position: absolute;
+	left: 0;
+	top: -2px;
+
+	@include transition(border-width, 0.1s);
+}
+
+input[type="radio"] + label.blue:before{
+	border-color: $blue;
+}
+// input[type="radio"]:checked + label{
+// 	color: $color-green;
+// }
+input[type="radio"]:checked + label:before{
+	border-width: 4px;
+}
+
+// Custom checkboxes
+input[type="checkbox"]{
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+input[type="checkbox"] + label{
+	position: relative;
+	display: table;
+	background: transparent;
+	color: $white;
+	padding-left: 30px;
+	margin: 0 0 20px;
+	line-height: 1.1875em;
+}
+input[type="checkbox"] + label:before{
+	content: '';
+	width: 21px;
+	height: 21px;
+	border: 3px solid $white;
+	position: absolute;
+	left: 0;
+	top: -3px;
+	opacity: 0.5;
+}
+input[type="checkbox"]:checked + label:before{
+	opacity: 1;
+}
+input[type="checkbox"] + label:after{
+	content: '+';
+	width: 21px;
+	font-weight: 700;
+	text-align: center;
+	font-size: 0;
+	line-height: 16px;
+	color: $white;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	@include transition(all, 0.1s);
+}
+input[type="checkbox"]:checked + label:after{
+	font-size: 18px;
+}
+
+//Fancy Select
+.fancy-select{
+	position: relative;
+	display: inline-block;
+	font-size: $initial-size;
+	color: $blue;
+	cursor: pointer;
+	z-index: 99;
+	width: 100%;
+	
+	select{
+		padding: 0;
+		opacity: 0;
+	}
+
+	.trigger{
+		position: relative;
+		padding: 0 0.5rem;
+		color: $blue;
+		width: 100%;
+		height: 34px;
+		line-height: 34px;
+		border: 1px solid lighten($blue, 20%);
+
+		&:before{
+			content: "\f107";
+			font-family: 'replacr';
+			width: 0.825em;
+			height: 50px;
+			display: block;
+			position: absolute;
+			right: 10px;
+			color: $blue;
+			font-size: 1.25rem;
+		}
+
+		&.open:before{
+			content: "\f106";
+		}
+	}
+
+	.options{
+		list-style: none;
+		display: none;
+		margin: 0;
+		background: $blue;
+		border: 1px solid lighten($blue, 20%);
+		border-top: none;
+		position: absolute;
+		right: 0;
+		top: 34px;
+		width: 100%;
+		z-index: 1;
+
+		&.open{
+			display: block;
+		}
+
+		li{
+			line-height: 34px;
+			padding: 0 0.5rem;
+			font-size:  $initial-size;
+			color: $blue;
+			border-bottom: 1px solid lighten($blue, 20%);
+			
+			@include transition(background, 0.25s);
+
+			&:hover{
+				background: darken($blue, 2%);
+			}
+
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}

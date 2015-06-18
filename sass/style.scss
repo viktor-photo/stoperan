@@ -1,0 +1,51 @@
+/* === Config === */
+@import "config/vars";
+@import "config/mixins";
+
+/* === Helpers === */
+@import "helpers/jquery.nouislider";
+@import "helpers/animations";
+@import "helpers/ie";
+@import "helpers/misc";
+@import "helpers/slick";
+@import "helpers/stylish-select";
+
+/* === Base === */
+@import "base/base";
+@import "base/buttons";
+@import "base/fonts";
+@import "base/forms";
+@import "base/typography";
+@import "base/range-slider";
+
+/* === Layout === */
+@import "layout/header";
+@import "layout/content";
+@import "layout/article";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/footer";
+
+/* === Parts === */
+@import "parts/widget";
+@import "parts/social-links";
+@import "parts/logged-in";
+@import "parts/main-banner";
+@import "parts/beach-filter";
+@import "parts/ranking";
+@import "parts/page-title";
+@import "parts/current-place";
+@import "parts/stream";
+@import "parts/prize";
+@import "parts/gmap";
+@import "parts/add-photo";
+@import "parts/uploaded-photos";
+@import "parts/add-beach-review";
+@import "parts/single-review";
+@import "parts/random-review";
+@import "parts/weather-large";
+@import "parts/rating-group";
+@import "parts/modal-box";
+
+/* === Pages Specific CSS === */
+// @import "pages/.....";

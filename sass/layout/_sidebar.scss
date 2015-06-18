@@ -1,0 +1,142 @@
+aside{
+	position: relative;	
+	font-family: $font-stack;
+
+	.rating-results{
+		position: relative;
+		padding: 15px 20px 12px;
+		border: 4px solid $red;
+
+		@include medium-up{
+			padding: 0;
+			border: none;
+		}
+
+		.w-head{
+			position: relative;
+
+			h3{
+				color: $red;
+				text-transform: uppercase;
+				font-weight: 900;
+				font-size: 12px;
+				margin: 0 75px 0 0;
+
+				@include phone-up{
+					font-size: 14px;
+				}
+
+				@include medium-up{
+					margin: 0;
+				}
+
+				@include tablet-up{
+					font-size: 16px;
+				}
+
+				@include desktop-up{
+					font-size: 18px;
+				}
+
+				@include wide-up{
+					font-size: 22px;
+				}
+			}
+
+			.trigger{
+				font-size: 10px;
+				color: $red;
+				text-transform: uppercase;
+				font-weight: 700;
+				line-height: 1em;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -6px;
+				cursor: pointer;
+				padding-right: 20px;
+
+				&:before{
+					content: '';
+					width: 12px;
+					height: 9px;
+					display: block;
+					border-top: 9px solid $red;
+					border-bottom: none;
+					border-right: 6px solid transparent;
+					border-left: 6px solid transparent;
+					position: absolute;
+					right: 0;
+				}
+
+				&.collapsed{
+
+					&:before{
+						content: '';
+						width: 12px;
+						height: 9px;
+						display: block;
+						border-top: none;
+						border-bottom: 9px solid $red;
+						border-right: 6px solid transparent;
+						border-left: 6px solid transparent;
+						position: absolute;
+						right: 0;
+					}	
+				}
+			}
+		}
+
+		.w-content{
+			display: none;
+
+			@include medium-up{
+				display: block !important;
+			}
+		}
+	}
+
+	.button.rate-it{
+		line-height: 54px;
+		height: 50px;
+		font-size: 18px;
+		margin-bottom: 20px;
+
+		@include medium-up{
+			margin-bottom: 30px;
+		}
+
+		@include tablet-up{
+			margin-bottom: 35px;
+			height: 60px;
+			line-height: 64px;
+			font-size: 20px;
+		}
+
+		@include desktop-up{
+			margin-bottom: 40px;
+		}
+
+		@include wide-up{
+			font-size: 24px;
+			height: 70px;
+			line-height: 75px;
+			margin-bottom: 50px;
+
+			&:before{
+				left: 10% !important;
+			}
+		}
+
+		@include ultra-wide{
+			font-size: 30px;
+			height: 76px;
+			line-height: 82px;
+			margin-bottom: 50px;
+
+			&:before{
+				left: 15% !important;
+			}
+		}
+	}
+}

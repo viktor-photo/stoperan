@@ -1,0 +1,419 @@
+<!doctype html>
+<!--[if IE 8]><html lang="pl" class="no-js lt-ie10 lt-ie9 ie8 ie" ng-app='App'> <![endif]-->
+<!--[if IE 9]><html lang="pl" class="no-js lt-ie10 ie9 ie" ng-app='App'> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="pl" class="no-js" ng-app='App'> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>Stoperan poleca</title>
+		<meta name="description" content="Project description">
+		<script src="js/vendor/modernizr.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- Favicons and Touch Device Icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-precomposed.png">
+		<link rel="apple-touch-icon" sizes="72x72"   href="apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header id="header" role="banner">
+			<div class="row">
+				<div class="small-12 column">
+					<div class="left">
+						<ul class="social-links">
+							<li>
+								<a href="#" class="ir" title="Facebook" rel="nofollow" target="_blank">
+									<img src="img/svg/facebook.svg" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="#" class="ir" title="Instagram" rel="nofollow" target="_blank">
+									<img src="img/svg/instagram.svg" alt="Instagram">
+								</a>
+							</li>
+							<!-- <li>
+								<a href="#" class="ir" title="Twitter" rel="nofollow" target="_blank">
+									<img src="img/svg/twitter.svg" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="#" class="ir" title="Youtube" rel="nofollow" target="_blank">
+									<img src="img/svg/youtube.svg" alt="Youtube">
+								</a>
+							</li> -->
+						</ul>
+					</div>
+					<div class="right">
+						<ul class="logged-in text-right">
+							<li>
+								<a href="#" data-modal="edit-account-popup" class="user-email">kasia@gmail.com</a>
+							</li>
+							<li>
+								<a href="#" data-modal="password-reset-popup" class="logout">Wyloguj</a>
+							</li>
+							<li>
+								<a href="#" data-modal="general-popup" class="logout">Popup</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main banner -->
+		<div class="main-banner">
+			<div class="row collapse full-height">
+				<div class="small-12 columns full-height">
+					<span class="triangles show-for-medium-up"></span>
+					<a href="#" class="button red arrow right large">Oceń plażę</a>
+					<a href="#" class="logo v-align ir" title="Stoperan">Stoperan</a>
+
+					<div class="random-review">
+						<h4>Uwielbiam tą plażę</h4>
+						<span class="location">plaża miejska <span>(GDYNIA ŚRÓDMIEŚCIE)</span></span>
+						<strong class="mt10">plaża beztroska na <span class="color-red">44%</span> - Kasia</strong>
+					</div>
+
+					<div class="highlight text-right right">
+						<span>Znajdź plażę beztroską na <img src="img/svg/sto.svg" alt="Sto" class="inline"></span><br /><span>i spędź wakacje marzeń nad polskim morzem.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<main id="content">
+
+			<!-- Filter -->
+			<section class="filter">
+				<div class="row">
+					<div class="small-12 small-centered medium-10 large-8 column">
+						<form class="beach-filter" action="">
+
+							<div class="row collapse">
+								<div class="small-8 columns">
+									<input type="text" placeholder="Miejscowość">
+									<button id="locate"></button>
+								</div>
+								<div class="small-4 columns">
+									<button class="button red expand" type="submit" title="Szukaj">Szukaj</button>
+								</div>
+							</div>
+
+							<div id="advanced-filter" class="row collapse">
+								<div class="small-12 column">
+									<h3 class="color-white">Dostosuj wyniki wyszukiwania</h3>
+								</div>
+								<div class="small-12 medium-6 columns">
+									<div class="term">
+										<input type="checkbox" id="term-1">
+										<label for="term-1">Czystość plaży</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-2">
+										<label for="term-2">Dostępność toalet</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-3">
+										<label for="term-3">Czystość toalet</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-4">
+										<label for="term-4">Obecność ratownika</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-5">
+										<label for="term-5">Ilość miejsca na kocyku</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-6">
+										<label for="term-6">Udogodnienia dla wózków</label>
+									</div>
+								</div>
+								<div class="small-12 medium-6 columns">
+									<div class="term">
+										<input type="checkbox" id="term-7">
+										<label for="term-7">Atrakcje dla dzieci</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-8">
+										<label for="term-8">Oferta gastronomiczna</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-9">
+										<label for="term-9">Możliwość wprowadzania zwierząt</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-10">
+										<label for="term-10">Możliwość wypożyczenia sprzętu</label>
+									</div>
+									<div class="term">
+										<input type="checkbox" id="term-11">
+										<label for="term-11">Dostępność Wi-Fi</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="row collapse">
+								<div class="small-12 column">
+									<a href="#" id="advanced" class="plus-icon">wyszukiwanie zaawansowane</a>
+									<a href="#" id="add-new" class="plus-icon">zgłoś plażę</a>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- Gmap -->
+			<section class="gmap-wrap">
+				<div class="row collapse">
+					<div class="small-12 column">
+						<img src="img/gmap.jpg" alt="">
+					</div>
+				</div>
+			</section>
+
+			<!-- Ranking -->
+			<section class="ranking">
+				<div class="row">
+					<div class="small-12 column">
+
+						<div class="rank-item featured slideUp">
+							<div class="row collapse" data-equalizer>
+								<div class="hide-for-small medium-5 large-4 columns" data-equalizer-watch>
+									<div class="item-thumbnail" style="background-image: url('img/beaches/beach-img-1.jpg');">
+										<span class="place">01</span>
+									</div>
+								</div>
+								<div class="small-12 medium-7 large-8 columns" data-equalizer-watch>
+									<div class="item-content">
+										<div class="place">
+											<span class="show-for-small-only">01</span>
+										</div>
+
+										<div class="total-score">
+											<span class="scr">80%</span>
+											<span class="txt uppercase">ocena</span>
+										</div>
+
+										<div class="row collapse">
+											<div class="small-12 large-8 columns">
+												<h2 class="title">Plaża centrum</h2>
+												<span class="location">Władysławowo</span>
+											</div>
+											<div class="small-12 large-4 columns large-text-right">
+												<a href="#" class="button white arrow rate-it" title="">OCEŃ PLAŻĘ</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="rank-item slideUp">
+							<div class="row collapse" data-equalizer>
+								<div class="hide-for-small medium-5 large-4 columns" data-equalizer-watch>
+									<div class="item-thumbnail" style="background-image: url('img/beaches/beach-img-2.jpg');">
+										<span class="place">02</span>
+									</div>
+								</div>
+								<div class="small-12 medium-7 large-8 columns" data-equalizer-watch>
+									<div class="item-content">
+										<div class="place">
+											<span class="show-for-small">02</span>
+										</div>
+
+										<div class="total-score">
+											<span class="scr">75%</span>
+											<span class="txt uppercase">ocena</span>
+										</div>
+
+										<div class="row collapse">
+											<div class="small-12 large-8 columns">
+												<h2 class="title">Plaża Piaśnica</h2>
+												<span class="location">Dębki</span>
+											</div>
+											<div class="small-12 large-4 columns large-text-right">
+												<a href="#" class="button white arrow rate-it" title="">OCEŃ PLAŻĘ</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="rank-item slideUp">
+							<div class="row collapse" data-equalizer>
+								<div class="hide-for-small medium-5 large-4 columns" data-equalizer-watch>
+									<div class="item-thumbnail" style="background-image: url('img/beaches/beach-img-3.jpg');">
+										<span class="place">03</span>
+									</div>
+								</div>
+								<div class="small-12 medium-7 large-8 columns" data-equalizer-watch>
+									<div class="item-content">
+										<div class="place">
+											<span class="show-for-small">03</span>
+										</div>
+
+										<div class="total-score">
+											<span class="scr">55%</span>
+											<span class="txt uppercase">ocena</span>
+										</div>
+
+										<div class="row collapse">
+											<div class="small-12 large-8 columns">
+												<h2 class="title">Plaża 12 marca</h2>
+												<span class="location">Karwia</span>
+											</div>
+											<div class="small-12 large-4 columns large-text-right">
+												<a href="#" class="button white arrow rate-it" title="">OCEŃ PLAŻĘ</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="small-12 column">
+								<span class="spinner"></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" role="contentinfo">
+			<div class="row">
+				<div class="small-12 medium-10 large-6 column">
+					<div class="row">
+						<div class="small-12 column">
+							<div class="logo-wrap">
+								<a href="#" class="logo ir" title="Stoperan">Stoperan poleca</a>
+								<p>© 2008-2013 USP Zdrowie Sp. z o.o.<br />ul. Poleczki 35, 02-822 Warszawa<br /> Tel: (71) 714 94 00 fax: (71) 714 94 10</p>
+							</div>
+							<div class="menus">
+								<ul>
+									<li><a href="#">Strona główna</a></li>
+									<li><a href="#">Zobacz pełny ranking</a></li>
+									<li><a href="#">Oceń plaże</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Regulamin</a></li>
+									<li><a href="#">Polityka prywatności</a></li>
+								</ul>
+								<a href="#">www.stoperan.pl</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 column small-text-left medium-text-right">
+					<p class="tech">Technologia: <a href="#" class="color-white"><b>Connectmedica</b></a></p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Edit account modal box -->
+		<div id="edit-account-popup" class="modal-box">
+			<header>
+				<h3 class="modal-title">Edycja profilu</h3>
+			</header>
+			<div class="modal-body">
+				<form action="" name="edit-account">
+					<div class="field login-field">
+						<input type="text" placeholder="Kasia">
+						<span class="add-icon"></span>
+						<!-- <span class="error-icon"></span> -->
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="field email-field">
+						<input type="email" placeholder="kasia@gmail.com">
+						<span class="add-icon"></span>
+						<!-- <span class="error-icon"></span> -->
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="field password-field">
+						<input type="password" placeholder="nowe hasło">
+						<span class="error-icon"></span>
+						<span class="tip">hasło musi posiadać<br />minimum osiem znaków</span>
+					</div>
+					<div class="field password-field">
+						<input type="password" placeholder="powtórz nowe hasło">
+						<span class="error-icon"></span>
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 medium-5 large-6 columns">
+							<a href="#" class="link delete-account" title="Usuń konto">+ usuń konto</a>
+						</div>
+						<div class="small-12 medium-7 large-6 columns">
+							<a href="#" class="button uppercase mb0 no-bg blue-border" title="Zapisz zmiany">+Zapisz zmiany</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Password reset modal box -->
+		<div id="password-reset-popup" class="modal-box">
+			<header>
+				<h3 class="modal-title mb10">Resetowanie hasła</h3>
+			</header>
+			<div class="modal-body">
+				<span class="block mb20">Wpisz swój adres email lub login, aby uzyskać nowe hasło.</span>
+				<form action="" name="password-reset">
+					<div class="field email-field">
+						<input type="email" placeholder="email lub login">
+						<!-- <span class="add-icon"></span> -->
+						<span class="error-icon"></span>
+						<span class="tip">Lorem ipsum dolor sit<br />amet, consectetur sed</span>
+					</div>
+					<div class="row collapse">
+						<div class="small-12 columns">
+							<a href="#" class="button right uppercase mb0 no-bg blue-border" title="Wyślij">+Wyślij</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- General modal box -->
+		<div id="general-popup" class="modal-box">
+			<header>
+				<h3 class="modal-title">Nam at dolor mi. donec auctor mattis dui, vitae facilisis ex vulputate sed.</h3>
+			</header>
+			<div class="modal-body">
+				<span class="block mt30 mb30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias quaerat, minima, nisi alias odit deserunt eum repellendus recusandae voluptatum, sapiente ut quisquam unde facilis explicabo laborum voluptas reiciendis mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias quaerat, minima, nisi alias odit deserunt eum repellendus recusandae voluptatum, sapiente ut quisquam unde facilis explicabo laborum voluptas reiciendis mollitia? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestias quaerat, minima, nisi alias odit deserunt eum repellendus recusandae voluptatum, sapiente ut quisquam unde facilis explicabo laborum voluptas reiciendis mollitia?</span>
+				<a href="#" class="button right uppercase no-bg blue-border" title="Wyślij">+sed lobortis</a>
+			</div>
+		</div>
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/foundation/foundation.js"></script>
+		<script src="js/foundation/foundation.equalizer.js"></script>
+		<script src="js/vendor/jquery.nouislider.all.min.js"></script>
+		<script src="js/vendor/slick.min.js"></script>
+		<script src="js/vendor/jquery.stylish-select.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

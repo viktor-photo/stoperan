@@ -1,0 +1,30 @@
+.prize{
+
+	h3{
+		text-transform: uppercase;
+		color: $red;
+		font-weight: 900;
+		font-size: 17px;
+
+		@include transition(all, 0.25s);
+		
+		@include phone-up{
+			font-size: 18px;
+		}
+		@include medium-up{
+			font-size: 20px;
+		}
+		@include tablet-up{
+			font-size: 22px;
+		}
+		@include desktop-up{
+			font-size: 24px;
+		}
+		@include wide-up{
+			font-size: 28px;
+		}
+		@include ultra-wide{
+			font-size: 32px;
+		}
+	}
+}

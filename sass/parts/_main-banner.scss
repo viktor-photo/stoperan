@@ -1,0 +1,279 @@
+.main-banner{
+	position: relative;
+	height: 275px;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: url('../img/banners/main-banner_480.jpg');
+	
+	@include transition(all, 0.2s);
+
+	@include phone-up{
+		height: 300px;
+		background-image: url('../img/banners/main-banner_768.jpg');
+	}
+	@include medium-up{
+		height: 360px;
+		background-image: url('../img/banners/main-banner_1024.jpg');
+	}
+	@include tablet-up{
+		height: 600px;
+		background-image: url('../img/banners/main-banner_1024.jpg');
+	}
+	@include desktop-up{
+		height: 620px;
+		background-image: url('../img/banners/main-banner_1200.jpg');
+	}
+	@include wide-up{
+		height: 620px;
+		background-image: url('../img/banners/main-banner_1600.jpg');
+	}
+	@include ultra-wide{
+		height: 620px;
+		background-image: url('../img/banners/main-banner_2560.jpg');
+	}
+
+	
+	&.wybrana-plaza{
+		height: 160px;
+		background-image: url('../img/banners/wybrana-plaza_480.jpg');
+		
+		.logo{ height: 90%;}
+
+		@include phone-up{
+			height: 210px;
+			background-image: url('../img/banners/wybrana-plaza_768.jpg');
+			
+			.logo{ height: 90%;}
+		}
+		@include medium-up{
+			height: 290px;
+			background-image: url('../img/banners/wybrana-plaza_1024.jpg');
+			
+			.logo{ 
+				height: 90%;
+				width: 235px;
+			}
+		}
+		@include tablet-up{
+			height: 360px;
+			background-image: url('../img/banners/wybrana-plaza_1024.jpg');
+			
+			.logo{ 
+				height: 90%;
+				width: 290px;
+			}
+		}
+		@include desktop-up{
+			height: 360px;
+			background-image: url('../img/banners/wybrana-plaza_1200.jpg');
+			
+			.logo{ height: 90%;}
+		}
+		@include wide-up{
+			height: 360px;
+			background-image: url('../img/banners/wybrana-plaza_1600.jpg');
+			
+			.logo{ height: 90%;}
+		}
+		@include ultra-wide{
+			height: 360px;
+			background-position: center center;
+			background-image: url('../img/banners/wybrana-plaza_2560.jpg');
+			
+			.logo{ height: 90%;}
+		}
+	}
+
+
+	.logo{
+		display: block;
+		width: auto;
+		height: 140px;
+		width: 130px;
+		background: url('../img/logo.png') no-repeat left center;
+		background-size: auto 100%;
+	
+		@include transition(all, 0.2s);
+		
+		@include phone-up{
+			width: 180px;
+			height: 66%;
+		}
+		@include medium-up{
+			width: 215px;
+		}
+		@include tablet-up{
+			width: 360px;
+		}
+		@include desktop-up{
+			width: 370px;
+		}
+	}
+
+	.button{
+		margin-top: 20px;
+		margin-right: 1.5rem;
+
+		@include medium-up{
+			margin-top: 30px;
+		}
+
+		@include tablet-up{
+			margin-top: 45px;
+		}
+
+		@include desktop-up{
+			margin-top: 55px;
+		}
+	}
+
+	.triangles{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.highlight{
+		color: $white;
+		margin-right: 1.5rem;
+		line-height: 1em;
+		position: absolute;
+		bottom: 20px;
+		width: 240px;
+		right: 0;
+
+		@include phone-up{
+			width: 350px;
+			font-size: 24px;
+			font-weight: 300;
+			bottom: 30px;
+		}
+
+		@include medium-up{
+			width: 600px;
+			font-size: 28px;
+		}
+
+		@include tablet-up{
+			width: auto;
+			font-size: 34px;
+			bottom: 75px;
+		}
+
+		@include desktop-up{
+			font-size: 43px;
+		}
+
+		@include wide-up{
+			font-size: 48px;
+		}
+
+		@include ultra-wide{
+			font-size: 56px;
+		}
+
+		br{
+			display: none;
+
+			@include medium-up{
+				display: block;
+			}
+		}
+
+		span{
+			background: $blue;
+			padding: 0 5px;
+			display: inline;
+			line-height: 1.1em;
+
+			@include desktop-up{
+				padding: 10px 20px;
+				line-height: 1.35em;
+			}
+
+			@include ultra-wide{
+				line-height: 1em;
+				padding: 3px 20px;
+			}
+		}
+
+		img{
+			width: 58px;
+			height: 22px;
+			position: relative;
+			top: -2px;
+
+			@include tablet-up{
+				width: 80px;
+				height: 35px;
+			}
+			@include desktop-up{
+				width: 120px;
+				height: 50px;
+				top: -7px;
+			}
+			@include ultra-wide{
+				width: 150px;
+				height: 75px;
+			}
+		}
+	}
+
+
+	// Main banner styles for "Ocen Plaze Ogolne" page 
+	&.ocen-plaze-ogolne{
+		height: 150px;
+		background-image: url('../img/banners/main-banner_768.jpg');
+
+		@include phone-up{
+			height: 200px;
+			background-image: url('../img/banners/main-banner_768.jpg');
+		}
+		@include medium-up{
+			height: 250px;
+			background-image: url('../img/banners/main-banner_1024.jpg');
+		}
+		@include tablet-up{
+			height: 290px;
+			background-image: url('../img/banners/main-banner_1024.jpg');
+		}
+		@include desktop-up{
+			height: 370px;
+			background-image: url('../img/banners/main-banner_1200.jpg');
+		}
+		@include wide-up{
+			height: 370px;
+			background-image: url('../img/banners/main-banner_1600.jpg');
+		}
+		@include ultra-wide{
+			height: 370px;
+			background-image: url('../img/banners/main-banner_2560.jpg');
+		}
+
+		.logo{
+			height: 100%;
+			width: 135px;
+
+			@include phone-up{
+				width: 180px;
+			}
+			@include medium-up{
+				width: 225px;
+			}
+			@include tablet-up{
+				width: 260px;
+			}
+			@include desktop-up{
+				width: 330px;
+			}
+			@include wide-up{
+				width: 330px;
+			}
+			@include ultra-wide{
+				width: 330px;
+			}
+		}
+	}
+}

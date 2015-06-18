@@ -1,0 +1,99 @@
+.single-rating-wrap{
+	position: relative;
+
+	.rating-title{
+		font-size: 12px;
+		line-height: 1em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0;
+
+		@include phone-up{
+			font-size: 14px;
+		}
+
+		@include tablet-up{
+			font-size: 16px;
+		}
+
+		@include desktop-up{
+			font-size: 18px;
+		}
+	}
+}
+
+.range-slider{
+	background: $blue;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	margin: 50px 0 12px;
+	height: 12px;
+
+	&[disabled]{
+		opacity: 1;
+		cursor: default;
+		background: $blue;
+
+		.noUi-handle{
+			cursor: default !important;
+		}
+	}
+
+	@include tablet-up{
+		margin: 70px 0 16px;
+		height: 20px;
+	}
+
+	.noUi-origin{
+		background: #e6e6e6;
+		border-radius: 0;
+
+		.noUi-handle{
+			height: 16px;
+			width: 20px;
+			top: auto;
+			left: -10px;
+			bottom: 16px;
+			border-radius: 0;
+			box-shadow: none;
+			border-top: 16px solid $blue;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: none;
+			background: none;
+			cursor: pointer;
+
+			@include tablet-up{
+				height: 30px;
+				width: 34px;
+				left: -17px;
+				bottom: 30px;
+				border-top: 30px solid $blue;
+				border-left: 17px solid transparent;
+				border-right: 17px solid transparent;
+			}
+
+			&:before,
+			&:after{
+				display: none;
+			}
+
+			& > div{
+				color: $blue;
+				font-weight: 700;
+				position: absolute;
+				bottom: 14px;
+				left: -50px;
+				width: 100px;
+				text-align: center;
+				font-size: 16px;
+
+				@include tablet-up{
+					bottom: 26px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

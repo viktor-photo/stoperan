@@ -1,0 +1,18 @@
+p{
+	font-size: $initial-size;
+	font-weight: 300;
+
+	a{
+		font-weight: 500;
+	}
+
+	@include tablet-up{
+		font-size: 18px;
+	}
+	@include desktop-up{
+		font-size: 22px;
+	}
+	@include wide-up{
+		font-size: 30px;
+	}
+}

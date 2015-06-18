@@ -1,0 +1,90 @@
+footer{
+	position: relative;
+	background-color: $blue;
+	background-repeat: no-repeat;
+	background-position: right top;
+	color: $white;
+	padding: 40px 0 30px;
+	font-family: $font-stack;
+	text-align: center;
+	
+	@include transition(all, 0.2s);
+
+	@include phone-up{
+		padding: 45px 0 35px;
+		text-align: left;
+	}
+	@include medium-up{
+		padding: 50px 0 20px;
+	}
+	@include tablet-up{
+		background-image: url('../img/triangles-bg-white.png');
+	}
+	@include desktop-up{
+		background-position: 65% top;
+	}
+
+	.logo{
+		width: 112px;
+		height: 82px;
+		display: block;
+		position: relative;
+		margin: 0 auto 30px;
+		background: url('../img/footer-logo-centered.png') no-repeat 0 0;
+
+		@include phone-up{
+			margin: 0 0 30px;
+			background: url('../img/footer-logo.png') no-repeat 0 0;
+		}
+	}
+
+	p{
+		font-size: 12px;
+
+		&.tech{
+			display: block;
+			margin: 10px auto 0;
+			text-align: center;
+			
+			@include phone-up{
+				display: inline-block;
+				margin: 10px 0 0;
+			}
+
+		}
+	}
+
+	a{
+		color: $white;
+		font-size: 14px;
+		font-weight: 700;
+
+		&:hover{
+			color: $white;
+		}
+	}
+	
+	.logo-wrap{
+		@include phone-up{
+			float: left;
+		}	
+	}
+	
+	.menus{
+		@include phone-up{
+			margin-left: 70px;
+			float: left;
+		}	
+	}
+
+	ul{
+		margin: 0 0 15px;
+		list-style: none;
+
+		a{
+			display: block;
+			margin: 0 0 5px;
+			line-height: 1.2em;
+		}
+	}
+}
